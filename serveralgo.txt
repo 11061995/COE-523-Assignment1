@@ -1,0 +1,49 @@
++---------------------+
+|   Start Server      |
+|   Socket Creation   |
+|   Bind and Listen   |
++----------|----------+
+           |
+           v
+   +------------------+
+   |   Accept Client  |
+   |   Connections    |
+   +----------|----------+
+              |
+              v
+       +--------------+
+       |  Handle       |
+       |  Communication|
+       |  for each      |
+       |  connected     |
+       |  client        |
+       +-----|----------+
+             |
+             v
+       +--------------+
+       |  Receive and  |
+       |  Process      |
+       |  Messages     |
+       +-----|----------+
+             |
+             v
+   +-------------------+
+   |  Update Online    |
+   |  Clients List     |
+   |  and Forward      |
+   |  Messages         |
+   +-------------------+
+             |
+             v
++----------------------+
+|  Handle Alive        |
+|  Messages            |
+|  Remove Inactive     |
+|  Clients             |
++----------------------+
+             |
+             v
+   +------------------+
+   |  Close Server    |
+   |  Socket           |
+   +------------------+

@@ -1,0 +1,35 @@
++-----------------------+
+|   Start Client        |
+|   Socket Creation     |
+|   Connect to Server   |
++-----------|-----------+
+            |
+            v
+    +------------------+
+    |  Send Client ID  |
+    |  to Server       |
+    +------|-----------+
+           |
+           v
+ +-----------------------+
+ | Start Receive Thread  |
+ | for Server Messages   |
+ +------|----------------+
+        |
+        v
+ +-----------------------+
+ | Start Alive Thread    |
+ | Periodically Send     |
+ | Alive Messages        |
+ +-----------------------+
+        |
+        v
+ +------------------------+
+ | User Interaction Loop |
+ |   Send/Receive Messages|
+ +------------------------+
+        |
+        v
+ +------------------------+
+ |  Close Client Socket   |
+ +------------------------+
